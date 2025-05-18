@@ -21,8 +21,11 @@
 
 const containerDiv = document.getElementById("container-div");
 
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 256; i++) {
   const div = document.createElement("div");
-  div.textContent = `Div ${i + 1}`;
+  div.classList.add("box");
   containerDiv.appendChild(div);
+  div.addEventListener("click", () => {
+    div.classList.add("visible");
+  });
 }
